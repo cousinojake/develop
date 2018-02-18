@@ -1,4 +1,5 @@
 import java.awt.*;
+import javax.swing.*;
 
 public class JcPanel
 {
@@ -6,12 +7,13 @@ public class JcPanel
   {
     _MainPanel = new JPanel();
     _Layout = new BorderLayout();
-    _MainPanel.SetLayout(_Layout);
+    _MainPanel.setLayout(_Layout);
   }
 
   public BorderLayout Layout() {  return _Layout; }
+  public JPanel Panel() { return _MainPanel; }
 
-  public void AddButton(JButton button, string layoutPosition)
+  public void AddButton(JButton button, String layoutPosition)
   {
     _MainPanel.add(button, layoutPosition);
   }
